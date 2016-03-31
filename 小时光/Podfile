@@ -1,0 +1,14 @@
+platform :ios, '7.0'
+pod 'MJRefresh'
+pod "AFNetworking", "~> 2.0"
+pod 'SVProgressHUD'
+pod 'IQKeyboardManager'
+pod 'Masonry'
+pod 'SDWebImage', '~>3.7'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'UIViewController+Swizzled', '~> 1.2'
+pod 'MJExtension'
+pod 'CYLTableViewPlaceHolder'
+pod 'PullToRefreshCoreText', '~> 0.2'
+pod "YYText"
+pod 'MKNetworkKit'

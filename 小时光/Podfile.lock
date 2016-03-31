@@ -1,0 +1,71 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CYLTableViewPlaceHolder (1.0.8)
+  - IQKeyboardManager (3.3.7)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - MKNetworkKit (0.87):
+    - Reachability (~> 3.1.0)
+  - PullToRefreshCoreText (0.2)
+  - Reachability (3.1.1)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (2.0.2)
+  - UIViewController+Swizzled (1.4)
+  - YYText (1.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - CYLTableViewPlaceHolder
+  - IQKeyboardManager
+  - Masonry
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension
+  - MJRefresh
+  - MKNetworkKit
+  - PullToRefreshCoreText (~> 0.2)
+  - SDWebImage (~> 3.7)
+  - SVProgressHUD
+  - UIViewController+Swizzled (~> 1.2)
+  - YYText
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  CYLTableViewPlaceHolder: 44075c119aab78bbc514c75d771d6565e19938e8
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  MKNetworkKit: 60ad3c83b62183e40ba75ce772c9427c25b520de
+  PullToRefreshCoreText: c843e71fc5ae5b033c0281067368905efd05c7b2
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: e4020e23badbd7cc61bc4a80d3c1da57f166a978
+  UIViewController+Swizzled: 1cd9397598ede6930f94fbcac4b43d63c7aa0dbb
+  YYText: 3050159192035d7f232b537ce76668aac2e2bd8b
+
+COCOAPODS: 0.38.2
