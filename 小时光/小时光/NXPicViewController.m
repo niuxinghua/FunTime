@@ -12,7 +12,10 @@
 #import "Net.h"
 #import "Header.h"
 #import "UIImageView+WebCache.h"
-@interface NXPicViewController ()
+#import "MJRefresh.h"
+@interface NXPicViewController (){
+    int pageindex;
+}
 
 @end
 
@@ -25,27 +28,50 @@
     self.automaticallyAdjustsScrollViewInsets=NO;
     _datalist=[NSMutableArray new];
     [self setUpUI];
-    [self getData];
+    pageindex=1;
+    _collection.mj_header=[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getData)];
+    [_collection.mj_header beginRefreshing];
+    _collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
 }
 -(void)getData{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSArray* array=[currentDateStr componentsSeparatedByString:@"-"];
-    [Net GetImageUrs:array[1] Day:array[2] success:^(id response) {
+    pageindex=1;
+    [Net GetImageUrs:pageindex id:1  success:^(id response) {
         NSLog(@"%@",response);
-        _datalist=[response objectForKey:@"tngou"];
+        _datalist=[NSMutableArray arrayWithArray:[response objectForKey:@"tngou"]];
         [_collection reloadData];
+        [_collection.mj_header endRefreshing];
     } fail:^(NSError *error) {
         NSLog(@"%@",error);
+        [_collection.mj_header endRefreshing];
     }];
+}
+-(void)loadMoreData{
+    pageindex++;
+    
+    [Net GetImageUrs:pageindex id:1  success:^(id response) {
+        NSLog(@"%@",response);
+        NSArray* data=[response objectForKey:@"tngou"];
+        if (data) {
+            for (int i=0; i<[data count]; i++) {
+                [_datalist addObject:data[i]];
+            }
+        }
+        
+        [_collection reloadData];
+        [_collection.mj_footer endRefreshing];
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+        [_collection.mj_footer endRefreshing];
+    }];
+    
 }
 -(void)setUpUI{
     
     UICollectionViewFlowLayout *layout=[[ UICollectionViewFlowLayout alloc ] init ];
     _collection=[[UICollectionView alloc]initWithFrame:CGRectZero  collectionViewLayout:layout];
     _collection.showsVerticalScrollIndicator=NO;
-    _collection.scrollEnabled=NO;
+    _collection.scrollEnabled=YES;
     
     [_collection registerClass :[ NXPicCollectionViewCell class ] forCellWithReuseIdentifier : @"meizi" ];
     _collection.backgroundColor=[UIColor whiteColor];
@@ -63,6 +89,9 @@
 //定义展示的UICollectionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    if (!_datalist) {
+        return 0;
+    }
     return [_datalist count];
 }
 //定义展示的Section的个数

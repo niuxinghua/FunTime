@@ -9,7 +9,7 @@
 #import "Net.h"
 #import "Header.h"
 @implementation Net
-+(void)GetImageUrs:(NSString *)month Day:(NSString *)day success:(success)success fail:(fail)fail{
++(void)GetImageUrs:(int)pageindex id:(int)Id success:(success)success fail:(fail)fail{
     static AFHTTPRequestOperationManager* manager=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -18,7 +18,8 @@
     });
     NSString* url=[NSString stringWithFormat:@"%@/福利/10/1",PIC_Url];
     NSLog(@"%@",url);
-    [manager GET:@"http://www.tngou.net/tnfs/api/list" parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    NSDictionary* dic=@{@"page":[NSNumber numberWithInt:pageindex],@"rows":@"30",@"id":[NSNumber numberWithInt:Id]};
+    [manager GET:@"http://www.tngou.net/tnfs/api/list" parameters:dic success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         success(responseObject);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         fail(error);

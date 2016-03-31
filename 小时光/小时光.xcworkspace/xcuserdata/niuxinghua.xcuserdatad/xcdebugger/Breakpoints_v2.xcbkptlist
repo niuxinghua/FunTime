@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "+GetImageUrs:Day:success:fail:"
+            landmarkName = "+GetImageUrs:id:success:fail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,28 +26,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/Net.m"
-            timestampString = "481114367.772195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "+GetImageUrs:Day:success:fail:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/Net.m"
-            timestampString = "481114367.772195"
+            timestampString = "481121356.730965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "+GetImageUrs:Day:success:fail:"
+            landmarkName = "+GetImageUrs:id:success:fail:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[Net GetImageUrs:id:success:fail:]"
+                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/Net.m"
+                  timestampString = "481122976.475806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35+[Net GetImageUrs:id:success:fail:]_block_invoke_2"
+                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/Net.m"
+                  timestampString = "481122976.475964"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/Net.m"
+            timestampString = "481121356.730965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "+GetImageUrs:id:success:fail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/Net.m"
-            timestampString = "481114367.772195"
+            timestampString = "481121356.730965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "+GetImageUrs:Day:success:fail:"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "+GetImageUrs:id:success:fail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
