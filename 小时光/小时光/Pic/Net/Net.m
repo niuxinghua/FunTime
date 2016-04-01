@@ -16,8 +16,7 @@
         manager=[AFHTTPRequestOperationManager manager];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     });
-    NSString* url=[NSString stringWithFormat:@"%@/福利/10/1",PIC_Url];
-    NSLog(@"%@",url);
+   
     NSDictionary* dic=@{@"page":[NSNumber numberWithInt:pageindex],@"rows":@"30",@"id":[NSNumber numberWithInt:Id]};
     [manager GET:@"http://www.tngou.net/tnfs/api/list" parameters:dic success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         success(responseObject);
