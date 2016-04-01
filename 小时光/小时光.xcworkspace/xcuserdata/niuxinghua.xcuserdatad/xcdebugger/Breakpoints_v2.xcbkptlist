@@ -33,38 +33,6 @@
             endingLineNumber = "22"
             landmarkName = "+GetImageUrs:id:success:fail:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[Net GetImageUrs:id:success:fail:]"
-                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/Net.m"
-                  timestampString = "481122976.475806"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "568">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__35+[Net GetImageUrs:id:success:fail:]_block_invoke_2"
-                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/Net.m"
-                  timestampString = "481122976.475964"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,6 +64,134 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "+GetImageUrs:id:success:fail:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicController/NXPicViewController.m"
+            timestampString = "481178560.664827"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-getData"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicController/NXPicViewController.m"
+            timestampString = "481178560.664827"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-loadMoreData"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NXPicViewController setUpUI]"
+                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/PicController/NXPicViewController.m"
+                  timestampString = "481178560.784623"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__30-[NXPicViewController setUpUI]_block_invoke"
+                  moduleName = "&#x5c0f;&#x65f6;&#x5149;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niuxinghua/Desktop/iosworkspace/FunTime/%E5%B0%8F%E6%97%B6%E5%85%89/%E5%B0%8F%E6%97%B6%E5%85%89/Pic/PicController/NXPicViewController.m"
+                  timestampString = "481178560.784887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicController/NXPicViewController.m"
+            timestampString = "481178560.664827"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-loadMoreData"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicView/STPhotoBrowserView/STPhotoBrowserController.m"
+            timestampString = "481173307.839933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
+            landmarkName = "-scrollView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicView/STPhotoBrowserView/STPhotoBrowserController.m"
+            timestampString = "481173310.57637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "448"
+            endingLineNumber = "448"
+            landmarkName = "-buttonSave"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5c0f;&#x65f6;&#x5149;/Pic/PicView/STPhotoBrowserView/STPhotoBrowserController.m"
+            timestampString = "481174481.719201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "473"
+            endingLineNumber = "473"
+            landmarkName = "-arrayPhotoBrowserView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

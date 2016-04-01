@@ -13,8 +13,12 @@
 #import "Header.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "MSSBrowseDefine.h"
+#import "KTDropdownMenuView.h"
 @interface NXPicViewController (){
     int pageindex;
+    BOOL isloading;
+    int ID;
 }
 
 @end
@@ -29,28 +33,30 @@
     _datalist=[NSMutableArray new];
     [self setUpUI];
     pageindex=1;
+    ID=1;
     _collection.mj_header=[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getData)];
     [_collection.mj_header beginRefreshing];
     _collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    NSArray *titles = @[@"性感美女", @"日韩美女", @"丝袜美腿", @"美女照片", @"美女写真",@"青春美女",@"性感车模"];
+    KTDropdownMenuView *menuView = [[KTDropdownMenuView alloc] initWithFrame:CGRectMake(0, 0,100, 44) titles:titles];
+    menuView.width = 150;
+    menuView.cellColor=[UIColor whiteColor];
+    menuView.textColor=[UIColor blackColor];
+    self.navigationItem.titleView = menuView;
+    menuView.selectedAtIndex = ^(int index)
+    {
+        NSLog(@"selected title:%@", titles[index]);
+        ID=index+1;
+        [_collection.mj_header beginRefreshing];
+    };
     
 }
 -(void)getData{
+    isloading=true;
     pageindex=1;
-    [Net GetImageUrs:pageindex id:1  success:^(id response) {
+    [Net GetImageUrs:pageindex id:ID  success:^(id response) {
         NSLog(@"%@",response);
-        _datalist=[NSMutableArray arrayWithArray:[response objectForKey:@"tngou"]];
-        [_collection reloadData];
-        [_collection.mj_header endRefreshing];
-    } fail:^(NSError *error) {
-        NSLog(@"%@",error);
-        [_collection.mj_header endRefreshing];
-    }];
-}
--(void)loadMoreData{
-    pageindex++;
-    
-    [Net GetImageUrs:pageindex id:1  success:^(id response) {
-        NSLog(@"%@",response);
+        [_datalist removeAllObjects];
         NSArray* data=[response objectForKey:@"tngou"];
         if (data) {
             for (int i=0; i<[data count]; i++) {
@@ -58,11 +64,37 @@
             }
         }
         
+        [_collection.mj_header endRefreshing];
+        [_collection reloadData];
+        NSLog(@"%zd datalist count",[_datalist count]);
+        isloading=false;
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+        [_collection.mj_header endRefreshing];
+        isloading=false;
+        [_collection reloadData];
+    }];
+}
+-(void)loadMoreData{
+    pageindex++;
+    isloading=true;
+    [Net GetImageUrs:pageindex id:ID  success:^(id response) {
+        
+        NSArray* data=[response objectForKey:@"tngou"];
+        if (data) {
+            for (int i=0; i<[data count]; i++) {
+                [_datalist addObject:data[i]];
+            }
+        }
+        NSLog(@"%zd datalist count",[_datalist count]);
         [_collection reloadData];
         [_collection.mj_footer endRefreshing];
+        isloading=false;
     } fail:^(NSError *error) {
         NSLog(@"%@",error);
         [_collection.mj_footer endRefreshing];
+        isloading=false;
+        [_collection reloadData];
     }];
     
 }
@@ -118,8 +150,6 @@
 {
     CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
     CGFloat threePiecesWidth = floor(screenWidth / 3.0 - ((2.0 / 3) * 2));
-    CGFloat twoPiecesWidth = floor(screenWidth / 2.0 - (2.0 / 2));
-    
     return CGSizeMake(threePiecesWidth, threePiecesWidth);
     
     
@@ -143,12 +173,30 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NXPicCollectionViewCell *cell = (NXPicCollectionViewCell *)[_collection cellForItemAtIndexPath:indexPath];
+    NSMutableArray *browseItemArray = [[NSMutableArray alloc]init];
     
+    for(int i = 0;i < [_datalist count];i++)
+    {
+        NSDictionary* dic=[_datalist objectAtIndex:i];
+        MSSBrowseModel *browseItem = [[MSSBrowseModel alloc]init];
+        browseItem.bigImageUrl = [NSString stringWithFormat:@"%@%@",PIC_Url,[dic objectForKey:@"img"]];// 大图url地址
+        browseItem.smallImageView = cell.PicView;
+        [browseItemArray addObject:browseItem];
+    }
+    
+    
+    MSSBrowseViewController *bvc = [[MSSBrowseViewController alloc]initWithBrowseItemArray:browseItemArray currentIndex:[indexPath row]];
+    [bvc showBrowseViewController];
 }
+
+
 //返回这个UICollectionView是否可以被选择
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+{if(!isloading){
     return YES;
+}
+    return NO;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
