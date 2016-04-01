@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title=@"妹子";
+    self.title=@"性感美女";
     self.automaticallyAdjustsScrollViewInsets=NO;
     _datalist=[NSMutableArray new];
     [self setUpUI];
@@ -38,7 +38,7 @@
     [_collection.mj_header beginRefreshing];
     _collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     NSArray *titles = @[@"性感美女", @"日韩美女", @"丝袜美腿", @"美女照片", @"美女写真",@"青春美女",@"性感车模"];
-    KTDropdownMenuView *menuView = [[KTDropdownMenuView alloc] initWithFrame:CGRectMake(0, 0,100, 44) titles:titles];
+    KTDropdownMenuView *menuView = [[KTDropdownMenuView alloc] initWithFrame:CGRectMake(0, 0,150, 44) titles:titles];
     menuView.width = 150;
     menuView.cellColor=[UIColor whiteColor];
     menuView.textColor=[UIColor blackColor];
