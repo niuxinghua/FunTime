@@ -15,6 +15,4 @@ typedef void(^fail) (NSError* error);
 +(void)tt;
 +(void)ttt;
 +(void)cancelPreviousPerformRequestsWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument;
-//test
-.......................
 @end
