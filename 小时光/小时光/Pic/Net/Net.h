@@ -10,6 +10,8 @@
 #import "AFNetworking.h"
 //test
 //shiyon
+//bierenxiugai
+double m;
 typedef void(^success) (id response);
 typedef void(^fail) (NSError* error);
 @interface Net : NSObject
