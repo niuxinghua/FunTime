@@ -14,5 +14,5 @@ typedef void(^fail) (NSError* error);
 +(void)GetImageUrs:(int)pageindex id:(int)Id success:(success)success fail:(fail)fail;
 +(void)tt;
 +(void)ttt;
-//test
++(void)cancelPreviousPerformRequestsWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument;
 @end
