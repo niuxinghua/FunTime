@@ -17,4 +17,5 @@ typedef void(^fail) (NSError* error);
 +(void)cancelPreviousPerformRequestsWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument;
 TTY_BI
 ---
+//test merge
 @end
